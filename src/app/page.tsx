@@ -17,8 +17,8 @@ export default async function HomePage() {
   return (
     <main className="">
       <div className="flex flex-wrap gap-4">
-        {posts.map((post) => (
-          <div>{post.name}</div>
+        {posts.map((post, index) => (
+          <div key={index}>{post.name}</div>
         ))}
         {mockImages.map((image) => (
           <div className="w-48 p-4" key={image.id}>
